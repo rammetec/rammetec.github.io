@@ -147,7 +147,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".centralview {\r\n    font-family: Roboto,\"Helvetica Neue\",sans-serif;\r\n    font-size: 14px;\r\n    padding: 20px;\r\n}\r\n\r\n/* Clear floats after the columns */\r\n\r\n.centralview:after {\r\n    content: \"\";\r\n    display: table;\r\n    clear: both;\r\n  }\r\n\r\n/* Left column */\r\n\r\n.centralview .leftcolumn { \r\n    float: left;\r\n    width: 75%;\r\n  }\r\n\r\n/* Right column */\r\n\r\n.centralview .rightcolumn {\r\n    float: right;\r\n    width: 25%;\r\n    padding-left: 20px;\r\n  }\r\n\r\n@media screen and (max-width: 800px) {\r\n    .centralview .leftcolumn, .centralview .rightcolumn { \r\n      width: 100%;\r\n      padding: 0;\r\n    }\r\n  }"
+module.exports = ".centralview {\r\n    font-family: Roboto,\"Helvetica Neue\",sans-serif;\r\n    font-size: 14px;\r\n    padding: 20px;\r\n    width: 900px;\r\n    margin-left: auto;\r\n    margin-right: auto;\r\n    margin-top: 64px;\r\n}\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -158,7 +158,7 @@ module.exports = ".centralview {\r\n    font-family: Roboto,\"Helvetica Neue\",s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"centralview\">\n  <div class=\"leftcolumn\">\n    <h3>Bruno Ramme - Quem é?</h3>\n    <p>Bruno Ramme trabalha com ERPs na área de gestão industrial e materiais há vários anos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor condimentum scelerisque. Sed suscipit semper elit ut vestibulum. Integer vitae felis quis mi faucibus tincidunt. In hendrerit turpis lobortis mi varius euismod. Quisque pharetra nisi ac magna blandit aliquam. Etiam pretium, urna eget dignissim accumsan, lacus lacus luctus risus, ac convallis est enim eu diam. Nunc fermentum libero enim, vel interdum tellus lobortis nec.\n\n        Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut facilisis tincidunt feugiat. Donec sed finibus magna. In quis libero a nisi facilisis congue ut sit amet erat. Sed porta tempus auctor. Sed hendrerit vitae velit sit amet laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed imperdiet lacus, ut volutpat lacus. Vestibulum tincidunt, tortor in fringilla sodales, magna sem facilisis ex, in faucibus massa mi non lectus. Sed nec ipsum vitae arcu bibendum feugiat. Donec non ullamcorper tellus.</p>\n  </div>\n</div>"
+module.exports = "<div class=\"centralview\">\n    <mat-grid-list cols=\"4\" rowHeight=\"100px\">\n        <mat-grid-tile\n            *ngFor=\"let tile of tiles\"\n            [colspan]=\"tile.cols\"\n            [rowspan]=\"tile.rows\"\n            [style.background]=\"tile.color\">\n          {{tile.text}}\n        </mat-grid-tile>\n      </mat-grid-list>\n</div>"
 
 /***/ }),
 
@@ -185,6 +185,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var CentralViewComponent = /** @class */ (function () {
     function CentralViewComponent() {
+        this.tiles = [
+            { text: 'One', cols: 3, rows: 1, color: 'lightblue' },
+            { text: 'Two', cols: 1, rows: 2, color: 'lightgreen' },
+            { text: 'Three', cols: 1, rows: 1, color: 'lightpink' },
+            { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' },
+        ];
     }
     CentralViewComponent.prototype.ngOnInit = function () {
     };
@@ -281,12 +287,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material/toolbar */ "./node_modules/@angular/material/esm5/toolbar.es5.js");
 /* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/esm5/button.es5.js");
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/esm5/card.es5.js");
+/* harmony import */ var _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/grid-list */ "./node_modules/@angular/material/esm5/grid-list.es5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -303,7 +311,8 @@ var MaterialCustomModule = /** @class */ (function () {
             exports: [
                 _angular_material_toolbar__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
                 _angular_material_button__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
-                _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardModule"]
+                _angular_material_card__WEBPACK_IMPORTED_MODULE_4__["MatCardModule"],
+                _angular_material_grid_list__WEBPACK_IMPORTED_MODULE_5__["MatGridListModule"]
             ],
             declarations: []
         })
