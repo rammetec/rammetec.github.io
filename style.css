@@ -13,6 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 
 .centralizado {
@@ -28,3 +29,25 @@ p {
     margin: 0.5em 0;
     font-size: 1.5em;
 }
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: #F8F9FA; /* Bootstrap primary blue */
+    background-color: #155377; /* Light grey background */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .links a:hover, .links a:focus {
+    color: #FFF; /* White text on hover/focus */
+    background-color: #2a6182; /* Darker blue background on hover/focus */
+    text-decoration: none;
+  }
