@@ -4,20 +4,194 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ramme Tecnologia</title>
+  <meta name="description" content="Rami Tecnologia - Soluções de software inovadoras para empresas do segmento industrial">
+  <title>Rami Tecnologia | Soluções de Software para Indústria</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="centralizado">
-    <h1>Ramme Tecnologia</h1>
-    <p>Desenvolvimento de soluções</p>
-  </div>
-  <div class="links">
-    <a href="https://bruno.ramme.dev">Bruno</a>
-    <a href="https://artur.ramme.dev">Artur</a>
-    <a href="https://pedro.ramme.dev">Pedro</a>
-  </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h2>Rami Tecnologia</h2>
+      </div>
+      <nav class="nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#solucoes">Soluções</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#equipe">Equipe</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button class="mobile-menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1 class="hero-title">Transformando a Indústria com Tecnologia de Ponta</h1>
+      <p class="hero-subtitle">Desenvolvemos soluções de software inovadoras para empresas do segmento industrial</p>
+      <a href="#contato" class="btn btn-primary">Fale Conosco</a>
+    </div>
+  </section>
+
+  <!-- Sobre Nós -->
+  <section id="sobre" class="section sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre a Rami Tecnologia</h2>
+      <div class="sobre-content">
+        <p>A Rami Tecnologia é especializada no desenvolvimento de soluções de software personalizadas para empresas do segmento industrial. Utilizamos tecnologias de ponta para criar sistemas que otimizam processos, aumentam a produtividade e impulsionam a transformação digital.</p>
+        <p>Nossa equipe combina expertise técnica com profundo conhecimento do setor industrial, garantindo soluções que atendem às necessidades específicas de cada cliente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluções -->
+  <section id="solucoes" class="section solucoes">
+    <div class="container">
+      <h2 class="section-title">Nossas Soluções</h2>
+      <div class="solucoes-grid">
+        <div class="solucao-card">
+          <div class="solucao-icon">⚙️</div>
+          <h3>Automação Industrial</h3>
+          <p>Sistemas inteligentes para automação e controle de processos industriais</p>
+        </div>
+        <div class="solucao-card">
+          <div class="solucao-icon">📊</div>
+          <h3>Gestão de Produção</h3>
+          <p>Ferramentas completas para monitoramento e otimização da produção em tempo real</p>
+        </div>
+        <div class="solucao-card">
+          <div class="solucao-icon">🔗</div>
+          <h3>Integração de Sistemas</h3>
+          <p>Conectamos seus sistemas existentes para máxima eficiência operacional</p>
+        </div>
+        <div class="solucao-card">
+          <div class="solucao-icon">📱</div>
+          <h3>Aplicações Personalizadas</h3>
+          <p>Desenvolvimento sob medida para atender necessidades específicas do seu negócio</p>
+        </div>
+        <div class="solucao-card">
+          <div class="solucao-icon">☁️</div>
+          <h3>Cloud Computing</h3>
+          <p>Soluções em nuvem para escalabilidade e acesso remoto seguro</p>
+        </div>
+        <div class="solucao-card">
+          <div class="solucao-icon">🤖</div>
+          <h3>IoT & Indústria 4.0</h3>
+          <p>Implementação de tecnologias IoT para fábricas inteligentes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologias -->
+  <section id="tecnologias" class="section tecnologias">
+    <div class="container">
+      <h2 class="section-title">Tecnologias de Ponta</h2>
+      <p class="tecnologias-intro">Utilizamos as mais modernas ferramentas e frameworks para entregar soluções robustas e escaláveis</p>
+      <div class="tecnologias-grid">
+        <div class="tech-badge">Python</div>
+        <div class="tech-badge">Node.js</div>
+        <div class="tech-badge">React</div>
+        <div class="tech-badge">Docker</div>
+        <div class="tech-badge">Kubernetes</div>
+        <div class="tech-badge">PostgreSQL</div>
+        <div class="tech-badge">MongoDB</div>
+        <div class="tech-badge">AWS</div>
+        <div class="tech-badge">Azure</div>
+        <div class="tech-badge">Machine Learning</div>
+        <div class="tech-badge">IoT</div>
+        <div class="tech-badge">Microservices</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipe -->
+  <section id="equipe" class="section equipe">
+    <div class="container">
+      <h2 class="section-title">Nossa Equipe</h2>
+      <div class="equipe-grid">
+        <div class="membro-card">
+          <div class="membro-avatar">B</div>
+          <h3>Bruno</h3>
+          <p class="membro-cargo">Sócio Fundador</p>
+          <a href="https://bruno.ramme.dev" class="btn btn-secondary" target="_blank" rel="noopener">Ver Perfil</a>
+        </div>
+        <!-- Placeholders para futuros membros -->
+        <!--
+        <div class="membro-card">
+          <div class="membro-avatar">A</div>
+          <h3>Artur</h3>
+          <p class="membro-cargo">Sócio Fundador</p>
+          <a href="https://artur.ramme.dev" class="btn btn-secondary" target="_blank" rel="noopener">Ver Perfil</a>
+        </div>
+        <div class="membro-card">
+          <div class="membro-avatar">P</div>
+          <h3>Pedro</h3>
+          <p class="membro-cargo">Sócio Fundador</p>
+          <a href="https://pedro.ramme.dev" class="btn btn-secondary" target="_blank" rel="noopener">Ver Perfil</a>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section contato">
+    <div class="container">
+      <h2 class="section-title">Entre em Contato</h2>
+      <div class="contato-content">
+        <div class="contato-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <h3>Localização</h3>
+              <p>Novo Hamburgo, Rio Grande do Sul</p>
+              <p>Brasil</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div>
+              <h3>Email</h3>
+              <p><a href="mailto:contato@ramitecnologia.com.br">contato@ramitecnologia.com.br</a></p>
+            </div>
+          </div>
+          <!-- Instagram placeholder para futuro -->
+          <!--
+          <div class="info-item">
+            <div class="info-icon">📱</div>
+            <div>
+              <h3>Redes Sociais</h3>
+              <p><a href="#" target="_blank" rel="noopener">Instagram</a></p>
+            </div>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Rami Tecnologia. Todos os direitos reservados.</p>
+      <p>Novo Hamburgo - RS, Brasil</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
