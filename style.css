@@ -6,16 +6,16 @@
 }
 
 :root {
-  --primary-color: #0066cc;
-  --secondary-color: #003d7a;
-  --accent-color: #00a8e8;
+  --primary-color: #07476b;
+  --secondary-color: #053a57;
+  --accent-color: #0a5f88;
   --text-dark: #1a1a1a;
   --text-light: #666;
   --bg-light: #f8f9fa;
   --bg-white: #ffffff;
   --border-color: #e0e0e0;
-  --gradient-start: #0066cc;
-  --gradient-end: #00a8e8;
+  --gradient-start: #07476b;
+  --gradient-end: #0a5f88;
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -261,6 +261,11 @@ body {
 .solucao-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.solucao-icon i {
+  display: block;
 }
 
 .solucao-card h3 {
@@ -272,48 +277,6 @@ body {
 .solucao-card p {
   color: var(--text-light);
   line-height: 1.6;
-}
-
-/* Tecnologias */
-.tecnologias {
-  background: var(--bg-light);
-}
-
-.tecnologias-intro {
-  text-align: center;
-  font-size: 1.1rem;
-  color: var(--text-light);
-  margin-bottom: 2rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.tecnologias-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.tech-badge {
-  background: var(--bg-white);
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-weight: 600;
-  color: var(--primary-color);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.tech-badge:hover {
-  background: var(--primary-color);
-  color: white;
-  transform: scale(1.05);
-  box-shadow: var(--shadow-md);
 }
 
 /* Equipe */
@@ -404,6 +367,11 @@ body {
 .info-icon {
   font-size: 2rem;
   min-width: 40px;
+  color: var(--primary-color);
+}
+
+.info-icon i {
+  display: block;
 }
 
 .info-item h3 {
@@ -451,6 +419,45 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Copy Email Button */
+.email-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.email-text {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.copy-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.copy-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.copy-btn.copied {
+  background: #28a745;
 }
 
 /* Responsive */

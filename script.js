@@ -87,3 +87,41 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(card);
   });
 });
+
+// Copy email to clipboard function
+function copyEmail() {
+  const email = 'contato@ramme.dev';
+  const button = document.querySelector('.copy-btn');
+  const buttonText = button.querySelector('.copy-text');
+
+  navigator.clipboard.writeText(email).then(function() {
+    // Change button appearance
+    button.classList.add('copied');
+    buttonText.textContent = 'Copiado!';
+
+    // Reset after 2 seconds
+    setTimeout(function() {
+      button.classList.remove('copied');
+      buttonText.textContent = 'Copiar';
+    }, 2000);
+  }).catch(function(err) {
+    console.error('Erro ao copiar email:', err);
+    // Fallback for older browsers
+    const textArea = document.createElement('textarea');
+    textArea.value = email;
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      button.classList.add('copied');
+      buttonText.textContent = 'Copiado!';
+      setTimeout(function() {
+        button.classList.remove('copied');
+        buttonText.textContent = 'Copiar';
+      }, 2000);
+    } catch (err) {
+      console.error('Fallback: Erro ao copiar', err);
+    }
+    document.body.removeChild(textArea);
+  });
+}
