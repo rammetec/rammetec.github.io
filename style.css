@@ -21,6 +21,23 @@
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* Dark Mode */
+[data-theme="dark"] {
+  --primary-color: #0a5f88;
+  --secondary-color: #0d7ab8;
+  --accent-color: #1a8fc9;
+  --text-dark: #e4e4e4;
+  --text-light: #b0b0b0;
+  --bg-light: #1a1a1a;
+  --bg-white: #2d2d2d;
+  --border-color: #404040;
+  --gradient-start: #0a5f88;
+  --gradient-end: #07476b;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -110,6 +127,39 @@ body {
   height: 3px;
   background: var(--text-dark);
   transition: all 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--border-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-light);
+  border-color: var(--primary-color);
+  transform: rotate(20deg);
+}
+
+.theme-toggle i {
+  transition: transform 0.3s ease;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /* Hero Section */
@@ -480,6 +530,13 @@ body {
 
   .mobile-menu-toggle {
     display: flex;
+  }
+
+  .theme-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    margin-left: 0.5rem;
   }
 
   .hero-title {
